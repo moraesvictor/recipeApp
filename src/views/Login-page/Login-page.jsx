@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 import * as S from './Login-page.styles';
 
+/**
+ * Component that renders a login page. 
+ * The login page contains a form to login and a button to register.
+ */
 export const LoginPage = ({className}) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
