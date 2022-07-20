@@ -54,6 +54,11 @@ export const Button = styled.button`
     &:active {
       background-color: ${getActiveBackgroundColor};
     }
+
+    &:disabled {
+      background-color: ${props => props.theme.colors.gray};
+      pointer-events: none;
+    }
 `
 
 export const ButtonLabel = styled.span``;
