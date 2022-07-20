@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import mainTheme from './styles/themes/mainTheme';
 import { LoginPage as _LoginPage } from './views/Login-page';
+import { Home } from './views/Home';
 
 const LoginPage = styled(_LoginPage)``;
 
@@ -23,6 +24,7 @@ function App() {
           <Wrapper>
             <Route exact path="/" component={LoginPage} />
           </Wrapper>
+            <Route path="/home" component={Home} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
