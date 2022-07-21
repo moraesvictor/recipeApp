@@ -10,6 +10,10 @@ export const Input = styled(_Input)`
 
 export const AvatarAndName = styled(_AvatarAndName)``;
 
+export const Title = styled.h1`
+  color: ${props => props.theme.colors.info};
+`;
+
 export const Wrapper = styled.header`
   width: 100vw; 
   height: 40px;

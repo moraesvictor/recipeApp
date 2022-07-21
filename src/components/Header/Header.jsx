@@ -15,6 +15,7 @@ export const Header = ({ onChange, inputPlaceHolder, svg }) => {
       ) : (
         <S.Input onChange={onChange} placeholder={inputPlaceHolder} />
       )}
+    <S.Title>App de receitas</S.Title>
     <S.AvatarAndName name="Soldier boy" profileImageUrl={IMG} />
     </S.Wrapper>
   );
