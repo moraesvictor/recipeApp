@@ -13,6 +13,8 @@ export default {
         success: '#4E41F0',
         info: '#F7931B',
         warning: '#E44C4E',
+
+        placeholder: '#FAFAFA',
     }
 }
 
