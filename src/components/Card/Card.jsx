@@ -4,11 +4,11 @@ import * as S from './Card.styles';
 /**
  * Component that renders a card with a header and a body.
  */
-export const Card = ({ title, srcImg, description, className}) => {
+export const Card = ({ title, srcImg, description, className, onImageClick, onCardClick}) => {
     return (
-        <S.Wrapper className={className}>
+        <S.Wrapper onClick={onCardClick} className={className}>
             <S.Title>{title}</S.Title>
-            <S.Img src={srcImg} />
+            <S.Img onClick={onImageClick} src={srcImg} />
             <S.Description>{description}</S.Description>
         </S.Wrapper>
     )
