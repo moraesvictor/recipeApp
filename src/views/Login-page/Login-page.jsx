@@ -1,10 +1,13 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import * as S from './Login-page.styles';
 
 export const LoginPage = ({className}) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  const history = useHistory();
 
   const regex = RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$");
 
@@ -22,6 +25,7 @@ export const LoginPage = ({className}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (regex.test(email) && password.length > 6) {
+      history.push('/home');
       console.log('success');
     } else {
       console.log('error');
@@ -31,6 +35,7 @@ export const LoginPage = ({className}) => {
 
   return (
     <S.Wrapper className={className}>
+      <S.Title>SEU APP DE RECEITAS</S.Title>
       <S.Title>Login</S.Title>
       <form>
         <S.SectionWrapper>
@@ -59,7 +64,7 @@ export const LoginPage = ({className}) => {
               name="password"
               placeholder="Digite sua senha"
               disabled={password.length < 6}
-              error={password.length < 6}
+              error={password.length < 6 ? 'Senha muito curta' : false}
             />
           </S.Label>
         </S.SectionWrapper>
