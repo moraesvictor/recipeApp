@@ -39,49 +39,52 @@ export const LoginPage = ({className}) => {
 
   return (
     <S.Wrapper className={className}>
-      <S.Title>SEU APP DE RECEITAS</S.Title>
-      <S.Title>Login</S.Title>
-      <form>
-        <S.SectionWrapper>
-          <S.Label>
-            Email:
-            <S.Input
-              onChange={handleEmailChange}
-              data-testid="email-input"
-              type="email"
-              name="email"
-              placeholder="Digite seu e-mail"
-              value={email}
-              error={regex.test(email) ? false : true}
-            />
-          </S.Label>
-        </S.SectionWrapper>
-        <S.SectionWrapper>
-          <S.Label>
-            Senha:
-            <S.Input
-              onChange={handlePasswordChange}
-              value={password}
-              data-testid="password-input"
-              lastInput
-              type="password"
-              name="password"
-              placeholder="Digite sua senha"
-              disabled={password.length < 6}
-              error={password.length < 6 ? 'Senha muito curta' : false}
-            />
-          </S.Label>
-        </S.SectionWrapper>
-        <S.SectionWrapper toTheEnd>
-        <S.Button kind="secundary" type="submit" label="Cadastrar" />
-          <S.Button 
-          data-testid="login-submit-btn"
-          kind="tertiary-variant"
-          type="submit"
-          label="Entrar"
-          onClick={handleSubmit}/>
-        </S.SectionWrapper>
-      </form>
+      <S.ContentLogin>
+        <S.Title>SEU APP DE RECEITAS</S.Title>
+        <S.Title>Login</S.Title>
+        <form>
+          <S.SectionWrapper>
+            <S.Label>
+              Email:
+              <S.Input
+                onChange={handleEmailChange}
+                data-testid="email-input"
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                value={email}
+                error={regex.test(email) ? false : true}
+              />
+            </S.Label>
+          </S.SectionWrapper>
+          <S.SectionWrapper>
+            <S.Label>
+              Senha:
+              <S.Input
+                onChange={handlePasswordChange}
+                value={password}
+                data-testid="password-input"
+                lastInput
+                type="password"
+                name="password"
+                placeholder="Digite sua senha"
+                disabled={password.length < 6}
+                error={password.length < 6 ? 'Senha muito curta' : false}
+              />
+            </S.Label>
+          </S.SectionWrapper>
+          <S.SectionWrapper toTheEnd>
+          <S.Button kind="secundary" type="submit" label="Cadastrar" />
+            <S.Button 
+            data-testid="login-submit-btn"
+            kind="tertiary-variant"
+            type="submit"
+            label="Entrar"
+            onClick={handleSubmit}/>
+          </S.SectionWrapper>
+        </form>
+      </S.ContentLogin>
+     
     </S.Wrapper>
   );
 };
