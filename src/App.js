@@ -9,13 +9,6 @@ import { Home } from './views/Home';
 
 const LoginPage = styled(_LoginPage)``;
 
-const Wrapper = styled.div`
-  background-color: ${props => props.theme.colors.primary};
-  display: flex;
-  justify-content: center;
-  vertical-align: center;
-  height: 100vh;
-`;
 
 function App() {
   return (
@@ -23,10 +16,8 @@ function App() {
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
           <Switch>
-            <Wrapper>
-              <Route exact path="/" component={Home} />
-            </Wrapper>
-            <Route exact path="/home" component={Home} />
+              <Route exact path="/" component={LoginPage} />
+              <Route exact path="/home" component={Home} />
           </Switch>
         </BrowserRouter>
       </ThemeProvider>
