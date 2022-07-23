@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from './Card.styles';
 
+
 /**
  * Component that renders a card with a header and a body.
  */
