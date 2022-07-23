@@ -5,6 +5,7 @@ import { createContext } from "react";
 
 export const Context = createContext([]);
 
+//TODO: create a better name for this function 
 export const Provider = ({ children }) => {
   
     const getApiTheme = () => {
