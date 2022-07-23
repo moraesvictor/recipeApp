@@ -24,7 +24,7 @@ function App() {
           <Wrapper>
             <Route exact path="/" component={LoginPage} />
           </Wrapper>
-            <Route path="/home" component={Home} />
+          <Route exact path="/home" component={Home} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
