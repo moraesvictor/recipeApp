@@ -9,7 +9,10 @@ export const Card = ({ title, srcImg, description, className, onImageClick, onCa
         <S.Wrapper onClick={onCardClick} className={className}>
             <S.Title>{title}</S.Title>
             <S.Img onClick={onImageClick} src={srcImg} />
-            <S.Description>{description}</S.Description>
+            <S.DescriptionWrapper>
+                <S.Description>{description}</S.Description>
+            </S.DescriptionWrapper>
+
         </S.Wrapper>
     )
 }

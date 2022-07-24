@@ -10,7 +10,7 @@ export const Provider = ({ children }) => {
   
     const getApiTheme = () => {
         const { isLoading, error, data } = useQuery('repoData', () =>
-          fetch(' https://www.themealdb.com/api.php').then(res =>
+          fetch('https://www.themealdb.com/api.php').then(res =>
             res.json()
           )
         )

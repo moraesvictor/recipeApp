@@ -6,6 +6,21 @@ export const Title = styled.h2``;
 
 export const Img = styled.img``;
 
+export const DescriptionWrapper = styled.div`
+  width: 100%;
+
+  ${Description} {
+    color: ${props => props.theme.colors.black};
+    font-size: 1.1rem;
+    padding: 16px 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+
+  }
+`;
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,15 +33,10 @@ export const Wrapper = styled.div`
 
   ${Img} {
     width: 100%;
+    height: 50%;
   }
 
   ${Title} {
     color: ${props => props.theme.colors.info};
-  }
-
-  ${Description} {
-    color: ${props => props.theme.colors.black};
-    font-size: 1.1rem;
-    padding: 16px 8px;
   }
 `;
