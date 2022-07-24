@@ -22,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Wrapper>
-            <Route exact path="/" component={LoginPage} />
+            <Route exact path="/" component={Home} />
           </Wrapper>
           <Route exact path="/home" component={Home} />
         </Switch>
