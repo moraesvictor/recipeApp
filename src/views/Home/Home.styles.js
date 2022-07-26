@@ -14,6 +14,8 @@ export const CardWrapper = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  height: 100vh;
+  background-color: ${props => props.theme.colors.primary} ;
   ${CardWrapper} {
     Margin-top: 16px;
   }

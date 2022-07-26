@@ -21,7 +21,7 @@ export const Input = styled(_Input)`
   ${({ lastInput }) => lastInput && css`margin-bottom: 16px;`};
 `;
 
-export const Wrapper = styled.div`
+export const ContentLogin = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,4 +48,12 @@ export const SectionWrapper = styled.div`
   }
 
   ${({toTheEnd}) => toTheEnd && css`justify-content: end;`}
+`;
+
+export const Wrapper = styled.div`
+  background-color: ${props => props.theme.colors.primary};
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  height: 100vh;
 `;

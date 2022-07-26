@@ -20,8 +20,9 @@ export const Wrapper = styled.header`
   background-color: ${props => props.theme.colors.white};
   display: flex;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: 4px 0 8px;
   align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray } ;
 
   ${Input} {
     margin-left: 16px;
